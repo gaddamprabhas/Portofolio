@@ -1,0 +1,241 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prabhas Gaddam — Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#6f42c1;
+      --muted:#6c757d;
+      --card-bg: linear-gradient(135deg, rgba(111,66,193,0.08), rgba(111,66,193,0.03));
+    }
+    body{
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(111,66,193,0.06), transparent 10%),
+                  radial-gradient(900px 450px at 90% 90%, rgba(49,132,255,0.04), transparent 10%);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#0f1724;
+    }
+    .navbar{
+      backdrop-filter: blur(6px);
+      background: rgba(255,255,255,0.6);
+      box-shadow: 0 6px 20px rgba(18,38,63,0.06);
+    }
+    .hero{
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(15,23,36,0.06);
+    }
+    .profile-pic{
+      width:140px;height:140px;object-fit:cover;border-radius:50%;
+      border:6px solid white;box-shadow: 0 8px 24px rgba(18,38,63,0.08);
+    }
+    .tag{
+      background:var(--card-bg);border-radius:999px;padding:6px 12px;font-size:13px;
+      color:var(--muted);margin-right:8px;margin-bottom:8px;display:inline-flex;align-items:center;gap:8px;
+    }
+    .projects .card{border:none;border-radius:14px;transition:transform .28s ease,box-shadow .28s ease;
+      background:linear-gradient(180deg,rgba(255,255,255,0.95),rgba(255,255,255,0.9));}
+    .projects .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(15,23,36,0.08);}
+    .project-badge{font-size:12px;padding:6px 10px;border-radius:12px;background:rgba(111,66,193,0.09);
+      color:var(--accent);font-weight:600;}
+    .social a{
+      display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;
+      margin-right:8px;text-decoration:none;color:#fff;background:linear-gradient(180deg,var(--accent),#4f2ea8);
+      box-shadow:0 8px 18px rgba(111,66,193,0.12);
+    }
+    footer{padding:2.5rem 0;color:var(--muted);}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">PRABHAS GADDAM</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="btn btn-outline-primary ms-lg-3" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <section class="hero p-4 p-md-5 mb-5">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img src="Photo_gaddamprabhas_.jpg" alt="Prabhas Gaddam" class="profile-pic">
+        </div>
+        <div class="col-md-8">
+          <h1 class="display-6 mb-2">Prabhas Gaddam</h1>
+          <p class="lead mb-3">Aspiring Software Engineer || .NET Developer</p>
+          <div class="mb-3">
+            <span class="tag"><i class="fa-solid fa-code"></i> .NET</span>
+            <span class="tag"><i class="fa-solid fa-database"></i> SQL</span>
+            <span class="tag"><i class="fa-solid fa-network-wired"></i> Networks</span>
+            <span class="tag"><i class="fa-solid fa-shield-halved"></i> InfoSec</span>
+          </div>
+          <p class="mb-4" style="color:var(--muted)">I build practical software solutions with a focus on reliability, security and maintainability. Below are some of my projects — dynamically generated using JavaScript loops.</p>
+          <div class="d-flex align-items-center social">
+            <a href="https://github.com/gaddamprabhas" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/gaddam-prabhas-784a741b0/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/prabhas_gaddam" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:prabhasgaddam2004@gmail.com" title="Mail"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="h4 mb-0">Projects</h2>
+        <div class="text-muted small">Selected Work — 4 Projects</div>
+      </div>
+      <div class="row g-4" id="projectContainer"></div>
+    </section>
+
+    <section id="education" class="mb-5">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <h3 class="h5">Education</h3>
+          <div class="card p-3" style="border-radius:12px">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="mb-1">Guru Nanak Institute of Technology</h5>
+                <div class="text-muted small">B.Tech — Computer Science & Engineering</div>
+              </div>
+              <div class="text-center">
+                <div class="fw-bold">GPA</div>
+                <div class="display-6">7.6</div>
+              </div>
+            </div>
+            <p class="mt-3 text-muted small">Focused on software engineering, networking and information security.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3 class="h5">Contact</h3>
+          <div class="card p-3" style="border-radius:12px">
+            <form id="contactForm" class="row g-3">
+              <div class="col-sm-6"><input type="text" class="form-control" placeholder="Your name" required></div>
+              <div class="col-sm-6"><input type="email" class="form-control" placeholder="Email" required></div>
+              <div class="col-12"><input type="text" class="form-control" placeholder="Phone number" required></div>
+              <div class="col-12"><input type="text" class="form-control" placeholder="Subject"></div>
+              <div class="col-12"><textarea class="form-control" rows="4" placeholder="Message"></textarea></div>
+              <div class="col-12 text-end"><button type="submit" class="btn btn-primary">Submit</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center">
+      <div class="mb-3">© <span id="year"></span> Prabhas Gaddam - All rights reserved</div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const projects = [
+      {badge:"Rural Tech",title:"Ration Distribution System",desc:"Solution to improve ration distribution in a rural village.",tools:"Tools: .NET, MySQL",img:"OIP (3).webp",modal:"#modal1"},
+      {badge:"Web App",title:"Bank Management System",desc:"Manage accounts, deposits, withdrawals and transaction history.",tools:"Tools: ASP.NET, SQL",img:"OIP.webp",modal:"#modal2"},
+      {badge:"Research",title:"Intrusion Detection & Prevention",desc:"Efficient intrusion detection and prevention for wireless sensor networks.",tools:"Tools: Java, Network Simulation",img:"OIP (1).webp",modal:"#modal3"}
+    ];
+
+    const container = document.getElementById("projectContainer");
+
+    projects.forEach(p=>{
+      container.innerHTML += `
+        <div class="col-lg-6 col-xl-3">
+          <div class="card h-100 p-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <div class="project-badge">${p.badge}</div>
+                <h5 class="mt-3">${p.title}</h5>
+                <p class="text-muted small">${p.desc}</p>
+              </div>
+              <div class="text-end">
+                <img src="${p.img}" alt="" class="rounded" style="width:72px;height:72px;object-fit:cover">
+              </div>
+            </div>
+            <div class="mt-3 d-flex justify-content-between align-items-center">
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="${p.modal}">Read More</button>
+              <div class="text-muted small">${p.tools}</div>
+            </div>
+          </div>
+        </div>`;
+    });
+
+    document.getElementById("contactForm").addEventListener("submit",function(e){
+      e.preventDefault();
+      alert("Submitted Successfully!");
+      this.reset();
+    });
+  </script>
+
+  <!-- Project Modals -->
+  <div class="modal fade" id="modal1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Ration Distribution System</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>This system improves ration distribution in rural villages by using a digital approach for tracking and delivery efficiency.</p>
+          <p><strong>Tools:</strong> .NET, MySQL</p>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Bank Management System</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>This application handles bank operations such as deposits, withdrawals, and account management efficiently.</p>
+          <p><strong>Tools:</strong> ASP.NET, SQL</p>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal3" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Intrusion Detection & Prevention</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Designed to detect and prevent network intrusions using secure communication mechanisms for wireless sensor networks.</p>
+          <p><strong>Tools:</strong> Java, Network Simulation</p>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
